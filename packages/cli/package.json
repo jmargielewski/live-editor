@@ -1,6 +1,6 @@
 {
   "name": "@js-docs/js-docs",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "license": "MIT",
   "bin": "dist/index.js",
   "publishConfig": {
@@ -14,10 +14,10 @@
     "prepublishOnly": "esbuild src/index.ts --platform=node --outfile=dist/index.js --bundle --minify --define:process.env.NODE_ENV=\\\"production\\\""
   },
   "dependencies": {
-    "@js-docs/local-client": "^1.0.0"
+    "@js-docs/local-client": "^2.0.0"
   },
   "devDependencies": {
-    "@js-docs/local-api": "^1.0.0",
+    "@js-docs/local-api": "^2.0.0",
     "@types/node": "^14.14.27",
     "commander": "^7.0.0",
     "esbuild": "0.8.26",
