@@ -1,5 +1,5 @@
 {
-  "name": "js-docs",
+  "name": "@js-docs/js-docs",
   "version": "1.0.0",
   "license": "MIT",
   "bin": "dist/index.js",
@@ -22,5 +22,6 @@
     "commander": "^7.0.0",
     "esbuild": "0.8.26",
     "typescript": "^4.1.5"
-  }
+  },
+  "gitHead": "3a526373ee0fab4747c8f962cf6898ceceea2b4a"
 }
