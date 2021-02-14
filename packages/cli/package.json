@@ -1,5 +1,5 @@
 {
-  "name": "@js-docs/js-docs",
+  "name": "@js-docs/cli",
   "version": "2.0.0",
   "license": "MIT",
   "bin": "dist/index.js",
