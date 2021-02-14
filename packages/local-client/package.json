@@ -5,7 +5,7 @@
     "access": "public"
   },
   "files": [
-    "build "
+    "build"
   ],
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.15.2",
