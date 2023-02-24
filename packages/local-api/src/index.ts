@@ -9,6 +9,8 @@ export const serve = (port: number, filename: string, dir: string, useProxy: boo
 
   app.use(createCellsRouter(filename, dir));
 
+  //TODO: add default notes
+
   if (useProxy) {
     app.use(
       createProxyMiddleware({
