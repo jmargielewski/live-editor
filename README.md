@@ -32,9 +32,7 @@ RUN LOCALLY
 
 ```
   cd packages/local-client
-  yarn
-
-  --------
+  yarn // to install deps
 
   cd ../..
   lerna bootstrap
