@@ -27,3 +27,15 @@ Defined port:
 ```
   npx @js-docs/cli serve -p, --port <number>
 ```
+
+RUN LOCALLY
+
+```
+  cd packages/local-client
+  yarn
+
+  --------
+
+  cd ../..
+  lerna bootstrap
+```
