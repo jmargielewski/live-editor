@@ -35,6 +35,7 @@ const reducer = produce(
         return state;
     }
   },
+  initialState
 );
 
 export default reducer;

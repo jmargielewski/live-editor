@@ -8,6 +8,10 @@ interface Cell {
   type: 'text' | 'code';
 }
 
+interface LocalApiError {
+  code: string;
+}
+
 export const createCellsRouter = (filename: string, dir: string) => {
   const router = express.Router();
   router.use(express.json());
@@ -15,14 +19,20 @@ export const createCellsRouter = (filename: string, dir: string) => {
   const fullPath = path.join(dir, filename);
 
   router.get('/cells', async (req, res) => {
+    const isLocalApiError = (err: any): err is LocalApiError => {
+      return typeof err.code === "string";
+    };
+
     try {
       const result = await fs.readFile(fullPath, { encoding: 'utf-8' });
       res.send(JSON.parse(result));
     } catch (err) {
-      if (err.code === 'ENOENT') {
-        // error no entity
-        await fs.writeFile(fullPath, '[]', 'utf-8');
-        res.send([]);
+
+      if (isLocalApiError(err)) {
+        if (err.code === "ENOENT") {
+          await fs.writeFile(fullPath, "[]", "utf-8");
+          res.send([]);
+        }
       } else {
         throw err;
       }
